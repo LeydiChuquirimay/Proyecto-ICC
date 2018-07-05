@@ -20,7 +20,7 @@ def Ejercicios():
     print("5. Tonifica tu cuerpo")
 
 #Rutinas segun imc :
-bajopeso = ["estiramiento","press de banca","sentadillas","press de hombros","Haye tgp", ]
+bajopeso = ["estiramiento 10-15 minutos ","Press en banca inclinada","Aperturas con mancuernas","Elevaciones de hombros frontal","Cruces de pie con poleas","Sentadilla","" ]
 pesonormal = ["estiramiento","explosion de burpes","squat jumps","jumping lunges","jumpick jacks"]
 sobrepeso = ["estiramiento","rotacion de troncos","cardio","Overhead squat","Lunge","Sumo Deadlift","Sit up",]
 obesidad = ["estiramiento","juck jumps","Knee up"," cardio"]
@@ -28,6 +28,16 @@ obesidad = ["estiramiento","juck jumps","Knee up"," cardio"]
 postura = ["pesas","face pulls","plank","sentadilla globel"]
 zonascom = ["bicicletas","saltar cuerda","abdomianles"]
 tonificacion = ["Sentadillas con mancuernas","Zancadas con mancuernas","Puente de glúteo","plancha abdominales" ]
+#Rutinas de la semana Bajo Peso
+#Ejercicio	Series	Repeticiones - Bajo Peso
+Lunes = ["Press en banca inclinada _ 10-15 repeticiones","Aperturas con mancuernas 10-15 repeticiones","Elevaciones de hombros frontal 10-15 repeticiones","Cruces de pie con polea"]
+Martes = ["Sentadilla","Prensa (cada pierna)","Peso muerto con piernas rígidas","Curl de pierna acostado","Zancadillas"]
+Miercoles = ["Press de tríceps","Curl de bíceps","Extensiones de tríceps en polea alta","Curl de bíceps en banco Scott","Fondos","Curl de bíceps en polea alta"]
+Jueves=["Espalda","Remo horizontal","Polea al pecho","Remo","Encogimiento de hombros","Pájaro sentado","Dominadas con agarre supino","Dominadas con agarre pronado"]
+Viernes = ["Press militar","Remo al cuello","Elevación de hombros lateral alternando","Press militar sentado""Elevaciones laterales alternadas con polea baja"]
+Sábado = ["Ejercicios funcionales (Powerlifting)","Sentadillas","Elevaciones de hombros","Flexiones con saltos","Dominadas(explosivas)"]
+Domingo = ["día libre a medias","Cardio ligero","nadar","excursión por montaña"]
+
 
 ejercicios=[]
 
