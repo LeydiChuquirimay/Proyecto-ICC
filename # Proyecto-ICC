@@ -1,0 +1,153 @@
+# Proyecto-ICC
+opcion=-1
+preferencia=-1
+def menu():
+    print()
+    print("************************************************************")
+    print("menu de opciones:")
+    print("1. Ingresar datos:")
+    print("2. Recomendación de Ejercicios:")
+    print("3. Eleccion de Ejercicios:")
+    print("el programa finaliza si ingresa el valor 0.")
+    print("************************************************************")
+    print()
+
+def Ejercicios():
+    print("1. Corrige tu postura")
+    print("2. Regula tu peso")
+    print("3. Zonas complicadas")
+    print("4. Recupera tu energia")
+    print("5. Tonifica tu cuerpo")
+    print("Para regresar al menu ingresar el valor 0.")
+
+#Rutinas segun imc :
+bajopeso = ["estiramiento","press de banca","sentadillas","press de hombros","Haye tgp", ]
+pesonormal = ["estiramiento","explosion de burpes","squat jumps","jumping lunges","jumpick jacks"]
+sobrepeso = ["estiramiento","rotacion de troncos","cardio","Overhead squat","Lunge","Sumo Deadlift","Sit up",]
+obesidad = ["estiramiento","juck jumps","Knee up"," cardio"]
+#Segun las lista de ejercicios  :
+corregir_postura = ["diario:","pesas","face pulls","plank","sentadilla globel"]
+zonas_complicadas = ["diario:","bicicletas","saltar cuerda","abdomianles"]
+tonificar = ["Sentadilla 30 repeticiones","Flexiones 20 repeticiones","Tocar tobillos y sentadilla 30 repeticiones","Elevación de glúteos 15 repeticiones","Encogimientos – 30 repeticiones","Remo agarre prono 20 repeticiones","Zancada frontal   15 repeticiones","Flexiones de tríceps 20 repeticiones","Remo agarre supino – 20 repeticiones","Sentadilla sumo – 20 repeticiones","Press militar – 15 repeticiones","Elevación de piernas – 25 repeticiones"]
+#Ejercicio  Series Repeticiones - Bajo Peso
+Lunes = ["Press en banca inclinada _ 10-15 repeticiones","Aperturas con mancuernas 10-15 repeticiones","Elevaciones de hombros frontal 10-15 repeticiones","Cruces de pie con polea"]
+Martes = ["Sentadilla","Prensa (cada pierna)","Peso muerto con piernas rígidas","Curl de pierna acostado","Zancadillas"]
+Miercoles = ["Press de tríceps","Curl de bíceps","Extensiones de tríceps en polea alta","Curl de bíceps en banco Scott","Fondos","Curl de bíceps en polea alta"]
+Jueves=["Espalda","Remo horizontal","Polea al pecho","Remo","Encogimiento de hombros","Pájaro sentado","Dominadas con agarre supino","Dominadas con agarre pronado"]
+Viernes = ["Press militar","Remo al cuello","Elevación de hombros lateral alternando","Press militar sentado""Elevaciones laterales alternadas con polea baja"]
+Sábado = ["Ejercicios funcionales (Powerlifting)","Sentadillas","Elevaciones de hombros","Flexiones con saltos","Dominadas(explosivas)"]
+Domingo = ["día libre a medias","Cardio ligero","nadar","excursión por montaña"]
+#ejercios Series Repeticiones - sobrepeso
+Lunes2 = ["Press banca con barra 5x8 ","Press Inclinado en máquina 5x8","Press Inclinado en máquina 5x8","Fondos Pectoral 3x8","Curl de bíceps con barra 4x6","Curl Scott con agarre cerrado3x8"]
+Martes2 = ["Jalón al pecho 4x6","Remo Barra","Remo Gironda 3x6 ","Peso Muerto 4x8"]
+Miercoles2 = ["Descanso"]
+Jueves2 = ["Sentadillas con barra 4 x8 ","Zancadas con mancuernas 3x6","Curl Femoral en máquina 4 x6","Peso muerto femoral con las rodillas bloqueadas 3x 10 ","Elevaciones de talones de pie en máquina 4 x 5"]
+viernes2 = ["Press Militar con mancuernas 4x 8","Elevaciones laterales con mancuernas 4x6","Pájaro 4x12","Press francés tumbado con barra Z 4x8","Fondos tríceps 3 x 8"]
+Sabado2 = ["Cardio ligerp - 10 min"]
+Domingo2 = ["Descanso"]
+#Rutina Series Repeticiones - Obesidad
+Lunes3 = ["estiramiento 5-10 minutos ","cardio 5- 1o minutos",""]
+Martes3 = ["Sentadillas 5 minutos","Flexiones de brazos","Estocadas o zancadas"]
+Miercoles3 = ["Descanso"]
+Jueves3 = ["estiramiento 5-10 minutos ","cardio 5- 1o minutos",""]
+Viernes3 = ["Sentadillas 5 minutos","Flexiones de brazos","Estocadas o zancadas"]
+Sabado3 = ["Descanso "]
+Domingo3 = ["Caminar "]
+
+ejercicios=[]
+
+print("********Bienvenidos********")
+menu()
+
+while opcion != 0:
+    opcion = int(input("ingrese la opción de operación:"))
+    if opcion == 1:
+        print("Ingrese su talla:")
+        Talla = float(input())
+        print("ingrese su peso:")
+        Peso = float(input())
+        print("Ingrese su edad:")
+        Edad = float(input())
+        T= Talla**2
+        Imc= round(Peso/T)
+        print("Su Indice de masa corporal es:")
+        print(Imc)
+        menu()
+    elif opcion == 2:
+        print("Usted tiene:")
+        if Imc < 18.5:
+            x = "bajo peso"
+            print(x)
+            print("Le recomendamos esta rutina:")
+            print(Lunes)
+            print(Martes)
+            print(Miercoles)
+            print(Jueves)
+            print(Viernes)
+            print(Sábado)
+            print(Domingo)
+        elif 18.5<=Imc<=24.9:
+            x = "peso normal"
+            print(x)
+            print("Elija que rutina quiere hacer en la opcion 3")
+        elif Imc>=25.0:
+            x = "sobre peso"
+            print(x)
+            print("Le recomendamos esta rutina:")
+            print(Lunes2)
+            print(Martes2)
+            print(Miercoles2)
+            print(Jueves2)
+            print(Viernes2)
+            print(Sábado2)
+            print(Domingo2)
+        elif 25.0<=Imc<=29.9:
+            x = "preobesidad"
+            print(x)
+            print("Le recomendamos estas rutinas:")
+            print(Lunes2)
+            print(Martes2)
+            print(Miercoles2)
+            print(Jueves2)
+            print(Viernes2)
+            print(Sábado2)
+            print(Domingo2)
+        elif 30<=Imc:
+            x = "obesidad"
+            print(x)
+            print("Le recomendamos esta rutina:")
+            print(Lunes3)
+            print(Martes3)
+            print(Miercoles3)
+            print(Jueves3)
+            print(Viernes3)
+            print(Sábado3)
+            print(Domingo3)
+        menu()
+    elif opcion == 3:
+        Ejercicios()
+        while preferencia!=0:
+            preferencia = int(input("ingrese la opción de preferencia:"))
+            if preferencia == 1:
+                print("3 veces a la semana")
+                print("dejando 1 dia de descanso entre sesion")
+                print(corregir_postura)
+            elif preferencia == 2:
+                print("3 veces a la semana")
+                print("dejando 1 dia de descanso entre sesion")
+                print("**************FALTA*****************")
+            elif preferencia == 3:
+                print("3 veces a la semana")
+                print("dejando 1 dia de descanso entre sesion")
+                print(zonas_complicadas )
+            elif preferencia == 4:
+                print("3 veces a la semana")
+                print("dejando 1 dia de descanso entre sesion")
+                print(zonas_complicadas )
+            elif preferencia == 5:
+                print("3 veces a la semana")
+                print("dejando 1 dia de descanso entre sesion")
+                print(tonificar)
+        menu()
+    elif opcion == 0:
+        print("gracias por utilizar el software.")
